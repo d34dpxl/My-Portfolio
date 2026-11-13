@@ -24,7 +24,6 @@ window.SITE = {
     /* ---------- Primary nav ---------- */
     nav: [
         { label: "About",    href: "#about"    },
-        { label: "Skills",   href: "#skills"   },
         { label: "Projects", href: "#projects" },
         { label: "Contact",  href: "#contact"  }
     ],
@@ -58,7 +57,7 @@ window.SITE = {
                 id: "forge",
                 title: "Forge",
                 meta: "C · 100KB · Deployment tool for edge devices",
-                description: "A minimal, zero-dependency deployment tool written in C that clones Git repositories, builds Docker images, and runs containers — all from a single 70KB static binary. Designed for edge devices and offline environments where every kilobyte matters.",
+                description: "A minimal, zero-dependency deployment tool written in C that clones Git repositories, builds Docker images, and runs containers — all from a single 100KB static binary. Designed for edge devices and offline environments where every kilobyte matters.",
                 tags: ["C", "Docker", "Linux", "Edge"],
                 actions: {
                     live: { label: "View on GitHub", href: "https://github.com/gauranga18/forge" },
