@@ -3,107 +3,80 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Portfolio</title>
-<meta name="description" content="">
+<title>Saurav Jyoti Kalita – Computing & AI</title>
+<meta name="description" content="Portfolio of Saurav Jyoti Kalita, a BCA student at Chandigarh University focused on Computing and AI — building lightweight, offline-first tools in C, C++, and Python.">
 <meta name="color-scheme" content="light">
-<meta name="theme-color" content="#0e0e0e" data-meta="themeColor">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" data-meta="favicon">
+<meta name="theme-color" content="#A8C8C7">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Saurav Jyoti Kalita – Computing & AI">
+<meta property="og:description" content="Building fast, offline-first tools for the edge. BCA · Chandigarh University.">
+<link rel="icon" href="assets/favicon.jpeg" type="image/svg+xml">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"></noscript>
+
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.classList.add("js")</script>
 <script src="js/data.js" defer></script>
 <script src="js/main.js" defer></script>
-<script src="js/borromean.js" defer></script>
 </head>
 <body>
-<a class="skip" href="#main" data-slot="skip-label">Skip to main content</a>
 
-<header class="bar">
-  <a class="logo" href="#top" aria-label="Back to top" data-slot="brand"></a>
-  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">
-    <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
-    <span class="sr">Menu</span>
-  </button>
-  <nav id="site-nav" aria-label="Primary" data-slot="nav"></nav>
+<a class="skip" href="#main">Skip to desktop</a>
+
+<!-- ============================================================
+     SYSTEM BAR
+     ============================================================ -->
+<header class="sysbar" role="banner">
+  <div class="sysbar-start">
+    <button class="start-btn" id="start-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="start-menu">
+      <span class="start-mark" aria-hidden="true"></span>
+      <span>Start</span>
+    </button>
+    <span class="sysbar-brand">
+      <b data-slot="brand-label">SJK</b>/OS
+      <small data-slot="brand-ver">v1.0</small>
+    </span>
+  </div>
+
+  <div class="sysbar-windows">
+    <button class="task-show-desktop" id="show-desktop" type="button" title="Show Desktop" aria-label="Show Desktop">
+      <svg viewBox="0 0 14 14" width="12" height="12" aria-hidden="true">
+        <rect x="1" y="3" width="9" height="8" fill="none" stroke="currentColor"/>
+        <rect x="4" y="1" width="9" height="8" fill="#C0C0C0" stroke="currentColor"/>
+      </svg>
+    </button>
+    <div class="taskbar" id="taskbar" role="toolbar" aria-label="Open windows"></div>
+  </div>
 </header>
 
-<main id="main" tabindex="-1">
-
-  <section class="hero on-sea" aria-labelledby="hero-title" data-slot="hero">
-  <div class="in">
-    <div class="hero-layout">
-      <!-- LEFT: existing portfolio content -->
-      <div class="hero-content">
-        <h1 id="hero-title" data-slot="hero-title"></h1>
-
-        <div class="hero-row">
-          <p class="lede" data-slot="hero-lede"></p>
-          <div class="cta" data-slot="hero-cta"></div>
-        </div>
-      </div>
-
-      <!-- RIGHT: interactive Borromean rings -->
-      <div class="hero-art" aria-label="Interactive Borromean rings">
-        <canvas
-          id="borromean-canvas"
-          role="img"
-          aria-label="Three rotating, triangulated Borromean rings"
-        ></canvas>
-      </div>
-    </div>
-
-    <!-- Existing footer links -->
-    <div class="hero-foot">
-      <ul class="links" aria-label="Contact links" data-slot="hero-links"></ul>
-    </div>
-  </div>
-</section>
-
-  <section id="projects" class="sec" aria-labelledby="projects-title" data-slot="projects">
-    <div class="in">
-      <h2 id="projects-title" data-slot="projects-heading"></h2>
-      <ul class="projects" data-slot="project-list"></ul>
-    </div>
-  </section>
-
-  <section id="about" class="sec about" aria-labelledby="about-title" data-slot="about">
-    <div class="in">
-      <h2 id="about-title" data-slot="about-heading"></h2>
-      <div class="cols">
-        <p class="lead" data-slot="about-lead"></p>
-        <div>
-          <h3 class="sub" data-slot="about-highlights-heading"></h3>
-          <ul class="plain" data-slot="about-highlights"></ul>
-          <h3 class="sub" data-slot="about-tools-heading"></h3>
-          <ul class="tags" aria-label="Tools" data-slot="about-tools"></ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="sec contact on-sea" aria-labelledby="contact-title" data-slot="contact">
-    <div class="in">
-      <h2 id="contact-title" data-slot="contact-heading"></h2>
-      <a class="mail" href="#" data-slot="contact-email"></a>
-      <ul class="links" aria-label="Other ways to reach me" data-slot="contact-links"></ul>
-    </div>
-  </section>
-
+<!-- ============================================================
+     DESKTOP
+     ============================================================ -->
+<main id="main" class="desktop" tabindex="-1" aria-label="Desktop">
+ <canvas id="wallpaper-canvas" aria-hidden="true"></canvas>
+  <ul class="desk-icons" id="desk-icons" aria-label="Desktop icons"></ul>
+  <div class="windows" id="windows" aria-live="polite"></div>
 </main>
 
-<footer class="foot">
-  <div class="in">
-    <p>&copy; <span id="yr">2026</span> <span data-slot="footer-name"></span></p>
-    <a data-slot="footer-source" href="#"></a>
-  </div>
-</footer>
+<!-- ============================================================
+     START MENU + CONTEXT MENU
+     ============================================================ -->
+<div class="start-menu" id="start-menu" hidden role="menu" aria-label="Start menu"></div>
+<div class="context-menu" id="context-menu" hidden role="menu" aria-label="Desktop context menu"></div>
 
 <noscript>
-  <div style="max-width:44rem;margin:4rem auto;padding:0 1.5rem;font-family:system-ui,sans-serif;line-height:1.6;color:#0e0e0e">
-    <h1 style="font-size:1.5rem;margin-bottom:1rem">This site needs JavaScript to render its content.</h1>
-    <p>If you'd like to see the projects, about, and contact information, please enable JavaScript, or reach me at
-      <a href="mailto:you@example.com" style="text-decoration:underline">you@example.com</a>.</p>
+  <div class="noscript">
+    <h1>SJK/OS needs JavaScript to boot.</h1>
+    <p>
+      Reach me at
+      <a href="mailto:sauravjyotikalita56@gmail.com">sauravjyotikalita56@gmail.com</a>,
+      or find me on
+      <a href="https://github.com/gauranga18" rel="noopener">GitHub</a> and
+      <a href="https://www.linkedin.com/in/saurav-jyoti/" rel="noopener">LinkedIn</a>.
+    </p>
   </div>
 </noscript>
 
