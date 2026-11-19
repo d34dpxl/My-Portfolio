@@ -2,83 +2,81 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Saurav Jyoti Kalita – Computing & AI</title>
 <meta name="description" content="Portfolio of Saurav Jyoti Kalita, a BCA student at Chandigarh University focused on Computing and AI — building lightweight, offline-first tools in C, C++, and Python.">
 <meta name="color-scheme" content="light">
-<meta name="theme-color" content="#A8C8C7">
+<meta name="theme-color" content="#6B9B9A">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Saurav Jyoti Kalita – Computing & AI">
 <meta property="og:description" content="Building fast, offline-first tools for the edge. BCA · Chandigarh University.">
-<link rel="icon" href="assets/favicon.jpeg" type="image/svg+xml">
-
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="assets/favicon.jpeg" type="image/jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"></noscript>
-
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"></noscript>
 <link rel="stylesheet" href="css/style.css">
-<script>document.documentElement.classList.add("js")</script>
-<script src="js/data.js" defer></script>
-<script src="js/main.js" defer></script>
 </head>
 <body>
 
-<a class="skip" href="#main">Skip to desktop</a>
+<a class="skip" href="#main">Skip to content</a>
 
-<!-- ============================================================
-     SYSTEM BAR
-     ============================================================ -->
+<!-- SYSTEM BAR -->
 <header class="sysbar" role="banner">
-  <div class="sysbar-start">
-    <button class="start-btn" id="start-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="start-menu">
-      <span class="start-mark" aria-hidden="true"></span>
+  <div class="sysbar-left">
+    <button class="start-btn" id="start-btn" type="button"
+      aria-haspopup="true" aria-expanded="false" aria-controls="start-menu">
+      <span class="start-flag" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </span>
       <span>Start</span>
     </button>
-    <span class="sysbar-brand">
-      <b data-slot="brand-label">SJK</b>/OS
-      <small data-slot="brand-ver">v1.0</small>
+    <span class="sysbar-brand" aria-hidden="true">
+      <b>SJK</b>/OS <small>v1.0</small>
     </span>
   </div>
 
-  <div class="sysbar-windows">
-    <button class="task-show-desktop" id="show-desktop" type="button" title="Show Desktop" aria-label="Show Desktop">
+  <div class="sysbar-mid">
+    <button class="show-desk-btn" id="show-desktop" type="button"
+      title="Show Desktop" aria-label="Show Desktop">
       <svg viewBox="0 0 14 14" width="12" height="12" aria-hidden="true">
         <rect x="1" y="3" width="9" height="8" fill="none" stroke="currentColor"/>
-        <rect x="4" y="1" width="9" height="8" fill="#C0C0C0" stroke="currentColor"/>
+        <rect x="4" y="1" width="9" height="8" fill="#C8C8C8" stroke="currentColor"/>
       </svg>
     </button>
     <div class="taskbar" id="taskbar" role="toolbar" aria-label="Open windows"></div>
   </div>
+
+  <div id="clock" class="sys-clock" aria-label="System time" aria-live="off"></div>
 </header>
 
-<!-- ============================================================
-     DESKTOP
-     ============================================================ -->
+<!-- DESKTOP -->
 <main id="main" class="desktop" tabindex="-1" aria-label="Desktop">
- <canvas id="wallpaper-canvas" aria-hidden="true"></canvas>
+  <canvas id="wallpaper-canvas" aria-hidden="true"></canvas>
   <ul class="desk-icons" id="desk-icons" aria-label="Desktop icons"></ul>
   <div class="windows" id="windows" aria-live="polite"></div>
 </main>
 
-<!-- ============================================================
-     START MENU + CONTEXT MENU
-     ============================================================ -->
-<div class="start-menu" id="start-menu" hidden role="menu" aria-label="Start menu"></div>
+<!-- START MENU & CONTEXT MENU -->
+<div class="start-menu" id="start-menu" hidden role="menu" aria-label="Start menu">
+  <div class="start-menu-brand">
+    <strong>SJK/OS</strong>
+    <span>SAURAV JYOTI KALITA</span>
+  </div>
+</div>
 <div class="context-menu" id="context-menu" hidden role="menu" aria-label="Desktop context menu"></div>
 
 <noscript>
   <div class="noscript">
-    <h1>SJK/OS needs JavaScript to boot.</h1>
-    <p>
-      Reach me at
-      <a href="mailto:sauravjyotikalita56@gmail.com">sauravjyotikalita56@gmail.com</a>,
-      or find me on
-      <a href="https://github.com/gauranga18" rel="noopener">GitHub</a> and
-      <a href="https://www.linkedin.com/in/saurav-jyoti/" rel="noopener">LinkedIn</a>.
-    </p>
+    <h1>SJK/OS requires JavaScript to boot.</h1>
+    <p>Reach me at <a href="mailto:sauravjyotikalita56@gmail.com">sauravjyotikalita56@gmail.com</a>,
+    or on <a href="https://github.com/gauranga18" rel="noopener">GitHub</a> and
+    <a href="https://www.linkedin.com/in/saurav-jyoti/" rel="noopener">LinkedIn</a>.</p>
   </div>
 </noscript>
 
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
